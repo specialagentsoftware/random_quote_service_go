@@ -14,15 +14,11 @@ import (
 	"github.com/specialagentsoftware/random_quote_service_go/quote_model"
 )
 
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
 func Qc() string {
-	p, _ := configparser.NewConfigParserFromFile("config/config.cfg")
-	v, _ := p.Get("DEFAULT", "CsvFilePath")
+	p, err := configparser.NewConfigParserFromFile("config/config.cfg")
+	check(err)
+	v, err := p.Get("DEFAULT", "CsvFilePath")
+	check(err)
 	data, err := os.ReadFile(v)
 	check(err)
 	ds := string(data)
@@ -53,4 +49,10 @@ func Qc() string {
 func getnewrandom() int {
 	randSpeed := rand.New(rand.NewSource(time.Now().UnixNano()))
 	return randSpeed.Intn(48390-0) + 0
+}
+
+func check(e error) {
+	if e != nil {
+		panic(e)
+	}
 }
