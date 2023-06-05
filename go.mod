@@ -3,6 +3,7 @@ module github.com/specialagentsoftware/random_quote_service_go
 go 1.20
 
 require (
+	github.com/bigkevmcd/go-configparser v0.0.0-20230427073640-c6b631f70126 // indirect
 	github.com/labstack/echo/v4 v4.10.2 // indirect
 	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect

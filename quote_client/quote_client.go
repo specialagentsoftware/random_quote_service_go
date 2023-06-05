@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/bigkevmcd/go-configparser"
 	"github.com/specialagentsoftware/random_quote_service_go/quote_model"
 )
 
@@ -20,7 +21,9 @@ func check(e error) {
 }
 
 func Qc() string {
-	data, err := os.ReadFile("data/quotes.csv")
+	p, _ := configparser.NewConfigParserFromFile("config/config.cfg")
+	v, _ := p.Get("DEFAULT", "CsvFilePath")
+	data, err := os.ReadFile(v)
 	check(err)
 	ds := string(data)
 	read := csv.NewReader(strings.NewReader(ds))

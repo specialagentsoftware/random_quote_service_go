@@ -1,3 +1,5 @@
+github.com/bigkevmcd/go-configparser v0.0.0-20230427073640-c6b631f70126 h1:uru++pUKoS/yYU3Ohq9VItZdK/cT7FFJH/UUjOlxc+s=
+github.com/bigkevmcd/go-configparser v0.0.0-20230427073640-c6b631f70126/go.mod h1:zqqfbfnDeSdRs1WihmMjSbhb2Ptw8Jbus831xoqiIec=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/labstack/echo/v4 v4.10.2 h1:n1jAhnq/elIFTHr1EYpiYtyKgx4RW9ccVgkqByZaN2M=
