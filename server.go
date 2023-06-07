@@ -9,9 +9,10 @@ import (
 
 func main() {
 	e := echo.New()
+	response := quote_client.QcInit()
 	e.GET("/", func(c echo.Context) error {
-		response := quote_client.Qc()
-		return c.HTML(http.StatusOK, response)
+		output := quote_client.Output(response)
+		return c.HTML(http.StatusOK, output)
 	})
 	e.Logger.Fatal(e.Start(":1323"))
 }
